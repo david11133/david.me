@@ -14,22 +14,19 @@ const Index = () => {
           <h2 className="text-2xl font-bold mb-6">Who am I?</h2>
           <div className="space-y-4 text-foreground leading-relaxed">
             <p>
-              I am <span className="font-bold">David</span> (or you can call me{" "}
-              <span className="font-bold">Dev</span>), a hobbyist software developer, and GNU/Linux user 
-              (I use Arch BTW xD). Interested in low-level programming and how the software works behind 
+              I am <span className="font-bold">David</span>, a junior Data Engineer graduate with about a year of hands-on experience. 
+              I enjoy building and automating things. mostly data pipelines, infra, and random scripts that make life easier.
+              I love open source projects and got to be part of <span className="font-bold">Google Summer of Code 2025</span>,
+              Now I'm just exploring new data tools, trying to understand how things fit together, and breaking stuff along the way (on purpose... mostly).
               the scenes and I spend my time building open-source projects and publishing them on{" "}
               <a 
-                href="https://github.com" 
+                href="https://github.com/david11133" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-accent hover:underline"
               >
                 GitHub
-              </a>
-              , and contributing to others. Currently, I am interested in{" "}
-              <span className="font-bold">the LLVM project</span> and compiler engineering and{" "}
-              <span className="font-bold">have made some small contributions</span>. I intend to also 
-              write about these topics in the future.
+              </a>.
             </p>
           </div>
         </section>
@@ -47,7 +44,7 @@ const Index = () => {
           <h2 className="text-xl font-bold mb-4">Find me on</h2>
           <div className="flex gap-4 mb-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/david11133" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-foreground hover:text-accent transition-colors"
@@ -56,7 +53,7 @@ const Index = () => {
               <span>GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/david-nady" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-foreground hover:text-accent transition-colors"
@@ -68,10 +65,10 @@ const Index = () => {
           <p className="text-muted-foreground">
             If you want to contact me, please email me at{" "}
             <a 
-              href="mailto:david@example.com" 
+              href="mailto:david.naddie@gmail.com" 
               className="text-accent hover:underline"
             >
-              david@example.com
+              david.naddie@gmail.com
             </a>
             , or any of the above links.
           </p>

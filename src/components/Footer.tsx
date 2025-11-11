@@ -18,7 +18,7 @@ const Footer = () => {
           </Link>
           <span>/</span>
           <a 
-            href="https://linkedin.com" 
+            href="https://linkedin.com/in/david-nady" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors"
@@ -27,7 +27,7 @@ const Footer = () => {
           </a>
           <span>/</span>
           <a 
-            href="https://github.com" 
+            href="https://github.com/david11133" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors"
