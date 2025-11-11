@@ -8,34 +8,19 @@ interface Project {
 
 const projects: Project[] = [
   {
-    category: "GSoC @Metacall",
-    title: "MetaSSR: An SSR framework for ReactJS built on Rust & Metacall",
-    description: "My project is about building an SSR framework for React.js (like Next.js and Gatsby.js) that is built on Rust using a new framework called 'nova_rs' to get a high performance, and using 'MetacalI core' to know how it's(Metacall core) good and suitable for real uses. Also, I helped find some bugs in the core and made some benchmarks before starting my project."
+    category: "GSoC @IOOS",
+    title: "Extend CROCOLAKE Tools Datasets",
+    description: "This project is part of the CrocoLake, which provides a unified database of oceanographic observations. CrocoLake's main goal is to make it easier for researchers and developers to access and work with different types of ocean data. Normally, these datasets come in various formats like NetCDF, CSV, or Parquet, and combining them can be time consuming and complex. CrocoLake solves this problem by converting them into a single, consistent Parquet format, so users can focus on analyzing the data instead of dealing with complicated file formats."
   },
   {
-    category: "Open Source Community",
-    title: "vnStat Client",
-    description: "An open-source GUI client for vnstat (a traffic monitor for GNU/Linux and BSD), and built on ElectronJS & NextJS."
+    category: "Personal Project",
+    title: "NASA Data Pipelines - Real Time API",
+    description: "This project demonstrates a real-time data streaming and processing pipeline using NASA's NEOWS (Near Earth Object Web Service) APIs to generate dynamic data on near-Earth objects. A Python script fetches data from the NEOWS APIs, publishing it to a Kafka topic for efficient management. We orchestrate this process with Apache Airflow, scheduling the data generation script to run regularly. Spark Structured Streaming is then utilized to consume and modify the data from Kafka, which is ultimately stored in a Cassandra database. All components run within Docker containers, ensuring a consistent and scalable development environment."
   },
   {
-    category: "Open Source Community",
-    title: "vnStat Server",
-    description: "An open-source tool built to serve your vnstat (a traffic monitor for GNU/Linux and BSD) data using an HTTP connection that able you to share this data between multiple machines, and controlling in vnStat daemon."
-  },
-  {
-    category: "Open Source Community",
-    title: "PrqLite",
-    description: "An open-source CLI tool built to use SQLite databases with PRQL (Pipelined Relational Query Language)."
-  },
-  {
-    category: "Open Source Community",
-    title: "Electronic document system",
-    description: "A highly encrypted, minimal document storage system was originally developed as part of a proposal for the Egyptian government to accelerate digitalization efforts further."
-  },
-  {
-    category: "Open Source Community",
-    title: "Fake Society",
-    description: "A frontend for a social media web application called 'Fake Society', I built it to be training for using Next.js and keeping up with ReactJs component libraries, and How I integrate Restful APIs in real world."
+    category: "Personal Project",
+    title: "Uber ETL Pipeline",
+    description: "The Uber Data Engineering Pipeline is designed to analyze Uber data by utilizing Google Cloud Platform (GCP) services including Mage-AI, Snowflake, and Looker. This pipeline covers the entire process from data ingestion to visualization, showcasing a full data engineering workflow."
   }
 ];
 
@@ -48,7 +33,7 @@ const Projects = () => {
         <div className="space-y-16">
           <section>
             <h2 className="text-3xl font-bold mb-8 text-foreground opacity-30">
-              GSoC @Metacall
+              GSoC @IOOS
             </h2>
             <div className="space-y-6">
               <div>
@@ -62,7 +47,7 @@ const Projects = () => {
 
           <section>
             <h2 className="text-3xl font-bold mb-8 text-foreground opacity-30">
-              Open Source Community
+              Personal Projects
             </h2>
             <div className="space-y-8">
               {projects.slice(1).map((project, index) => (

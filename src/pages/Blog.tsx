@@ -10,13 +10,19 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    title: "Summer of Bitcoin Internship Program: Why it is More Valuable Than Gold",
+    title: "Google Summer of Code - Why it is very Valuable",
     date: "Sep 26",
     excerpt: "In the previous article, we talked about my project in the Summer of Bitcoin internship, and today we will learn more about Summer of Bitcoin itself and the opportunities we can get from it. It's a great chance to gain experience, network with industry professionals, and contribute to real-world projects that are shaping the future of finance and technology. If you love open source, blockchain, and Bitcoin, this internship is more valuable than gold!",
     tags: ["Internship", "Summer of Bitcoin", "Bitcoin", "Cryptocurrency", "Blockchain"]
   },
   {
-    title: "Mill-IO: Event-loop Library for Rust!",
+    title: "CROCOLAKE Tools Project - Final Report",
+    date: "Aug 29",
+    excerpt: "Mill-IO is a lightweight event loop library for Rust that provides efficient non-blocking I/O management without relying on heavyweight async runtimes. It's a reactor-based event loop implementation built on top of mio-rs. In this article, we'll discuss it, the problem it solves, why it exists, and more!",
+    tags: ["Rust", "Event Loop", "I/O", "Concurrency", "System Programming"]
+  },
+  {
+    title: "How I've got selected in GSoC'25",
     date: "Aug 29",
     excerpt: "Mill-IO is a lightweight event loop library for Rust that provides efficient non-blocking I/O management without relying on heavyweight async runtimes. It's a reactor-based event loop implementation built on top of mio-rs. In this article, we'll discuss it, the problem it solves, why it exists, and more!",
     tags: ["Rust", "Event Loop", "I/O", "Concurrency", "System Programming"]
