@@ -15,7 +15,13 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter
+        basename={
+          typeof window !== "undefined" && window.location.pathname.startsWith("/david.me/")
+            ? "/david.me/"
+            : import.meta.env.BASE_URL
+        }
+      >
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
