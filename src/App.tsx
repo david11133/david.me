@@ -16,11 +16,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter
-        basename={
-          typeof window !== "undefined" && window.location.pathname.startsWith("/david.me/")
-            ? "/david.me/"
-            : import.meta.env.BASE_URL
-        }
+        basename={import.meta.env.BASE_URL}
       >
         <Routes>
           <Route path="/" element={<Index />} />

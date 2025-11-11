@@ -6,8 +6,8 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Set the base path for assets and router. Adjust for your deploy subpath.
-  // In development we keep it at '/', and in production we use '/david.me/'.
-  base: mode === "development" ? "/" : "/david.me/",
+  // On Cloudflare Pages we serve from the root.
+  base: "/",
   server: {
     host: "::",
     port: 8080,
