@@ -1,33 +1,7 @@
 import Layout from "@/components/Layout";
 import { Badge } from "@/components/ui/badge";
-
-interface BlogPost {
-  title: string;
-  date: string;
-  excerpt: string;
-  tags: string[];
-}
-
-const blogPosts: BlogPost[] = [
-  {
-    title: "Google Summer of Code - Why it is very Valuable",
-    date: "Sep 26",
-    excerpt: "In the previous article, we talked about my project in the Summer of Bitcoin internship, and today we will learn more about Summer of Bitcoin itself and the opportunities we can get from it. It's a great chance to gain experience, network with industry professionals, and contribute to real-world projects that are shaping the future of finance and technology. If you love open source, blockchain, and Bitcoin, this internship is more valuable than gold!",
-    tags: ["Internship", "Summer of Bitcoin", "Bitcoin", "Cryptocurrency", "Blockchain"]
-  },
-  {
-    title: "CROCOLAKE Tools Project - Final Report",
-    date: "Aug 29",
-    excerpt: "Mill-IO is a lightweight event loop library for Rust that provides efficient non-blocking I/O management without relying on heavyweight async runtimes. It's a reactor-based event loop implementation built on top of mio-rs. In this article, we'll discuss it, the problem it solves, why it exists, and more!",
-    tags: ["Rust", "Event Loop", "I/O", "Concurrency", "System Programming"]
-  },
-  {
-    title: "How I've got selected in GSoC'25",
-    date: "Aug 29",
-    excerpt: "Mill-IO is a lightweight event loop library for Rust that provides efficient non-blocking I/O management without relying on heavyweight async runtimes. It's a reactor-based event loop implementation built on top of mio-rs. In this article, we'll discuss it, the problem it solves, why it exists, and more!",
-    tags: ["Rust", "Event Loop", "I/O", "Concurrency", "System Programming"]
-  }
-];
+import { blogPosts } from "@/data/blog";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -36,12 +10,14 @@ const Blog = () => {
         <h1 className="text-4xl sm:text-5xl font-bold mb-12">Blog</h1>
 
         <div className="space-y-12">
-          {blogPosts.map((post, index) => (
-            <article key={index} className="border-b border-border pb-12 last:border-b-0">
+          {blogPosts.map((post) => (
+            <article key={post.slug} className="border-b border-border pb-12 last:border-b-0">
               <div className="mb-4">
-                <h2 className="text-3xl font-bold mb-2 text-foreground opacity-30 hover:opacity-100 transition-opacity cursor-pointer">
-                  {post.title}
-                </h2>
+                <Link to={`/blog/${post.slug}`}>
+                  <h2 className="text-3xl font-bold mb-2 text-foreground opacity-30 hover:opacity-100 transition-opacity">
+                    {post.title}
+                  </h2>
+                </Link>
                 <time className="text-sm text-muted-foreground">{post.date}</time>
               </div>
               
@@ -50,15 +26,21 @@ const Blog = () => {
               </p>
 
               <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag, tagIndex) => (
+                {post.tags.map((tag) => (
                   <Badge 
-                    key={tagIndex} 
+                    key={tag} 
                     variant="secondary"
                     className="text-xs"
                   >
                     {tag}
                   </Badge>
                 ))}
+              </div>
+
+              <div className="mt-4">
+                <Link to={`/blog/${post.slug}`} className="text-primary underline underline-offset-4">
+                  Read more
+                </Link>
               </div>
             </article>
           ))}
