@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Github, Linkedin } from "lucide-react";
-import heroImage from "@/assets/hero-image.png";
+import heroImage from "@/assets/hero-image.gif";
 
 const Index = () => {
   return (
