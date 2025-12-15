@@ -6,9 +6,9 @@ const Index = () => {
   return (
     <Layout>
       <div className="text-[2.5rem] sm:text-[3rem] font-bold mb-8 text-center">
-        <h1 className="text-[3.75rem] sm:text-[4.25rem] font-bold mb-8 text-center">
+        <h2 className="text-[3.75rem] sm:text-[4.25rem] font-bold mb-8 text-center">
           Less noise. More meaning.
-        </h1>
+        </h2>
 
 
         <section className="mb-12">
