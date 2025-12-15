@@ -6,9 +6,10 @@ const Index = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center">
+        <h1 className="text-[3.75rem] sm:text-[4.25rem] font-bold mb-8 text-center">
           Less noise. More meaning.
         </h1>
+
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Who am I?</h2>
