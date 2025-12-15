@@ -7,18 +7,18 @@ const Index = () => {
     <Layout>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center">
-          Hey there!
+          Less noise. More meaning.
         </h1>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Who am I?</h2>
           <div className="space-y-4 text-foreground leading-relaxed">
             <p>
-              I am <span className="font-bold">David</span>, a junior Data Engineer graduate with about a year of hands-on experience. 
-              I enjoy building and automating things. mostly data pipelines, infra, and random scripts that make life easier.
+              I am <span className="font-bold">David</span>, a junior Data Engineer graduate with about a year of hands on experience. 
+              I build and automate boring tasks. mostly data pipelines, infra, and random scripts that make life easier.
               I love open source projects and got to be part of <span className="font-bold">Google Summer of Code 2025</span>,
-              Now I'm just exploring new data tools, trying to understand how things fit together, and breaking stuff along the way (on purpose... mostly).
-              the scenes and I spend my time building open-source projects and publishing them on{" "}
+              Now I'm exploring new data tools, trying to understand how things fit together, and breaking stuff along the way.
+              the scenes and I spend my time building open-source projects and publishing them on my{" "}
               <a 
                 href="https://github.com/david11133" 
                 target="_blank" 
