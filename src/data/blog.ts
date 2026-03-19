@@ -48,14 +48,18 @@ We compared several strategies, validated with benchmarks, and documented trade-
   },
   {
     slug: "how-i-got-selected-in-gsoc-25",
-    title: "How I've got selected in GSoC'25",
+    title: "How I got selected in GSoC'25",
     date: "Aug 29",
     excerpt:
       "Lessons and tactics that helped me stand out and get selected for GSoC'25.",
     tags: ["Open Source", "GSoC", "Career"],
     content: `Back in Feb 2025, I was scrolling on X (Twitter), and I randomly came across a post where someone was talking about their GSoC experience. That's how I first heard about it.
 
-I knew that Google gives a stipend for it, so obviously I got curious. I started searching more about it — blogs, YouTube videos, random posts everywhere. There was too much info and I got kinda lost. So if you are feeling the same, don't worry — this is basically everything I wish I had in one place.
+I knew that Google gives a stipend for it, so obviously I got curious. 
+
+I started searching more about it, blogs, YouTube videos, random posts everywhere. There was too much info and I got kinda lost. 
+
+So if you are feeling the same, don't worry, this is basically everything I wish I had in one place.
 
 ## So what is GSoC?
 
@@ -85,9 +89,12 @@ You can switch the year in the URL. When you click any org, you'll find their we
 
 ## Choosing What You Want
 
-There are a lot of orgs, so how do you choose the right one? First ask yourself:
+There are a lot of orgs, so how do you choose the right one? 
 
-- What do I actually like? Backend? AI? Systems? Data?
+First ask yourself:
+
+- What do I actually like? 
+- Backend? AI? Systems? Data?, etc.
 - What languages would I like to use?
 
 Once you figure that out, things get a bit easier.
@@ -114,9 +121,11 @@ Now comes the real work:
 - Try to run it (this alone might take time)
 - Look for issues (good first issues if available)
 - Start fixing stuff or adding small improvements
-- Talk to mentors and ask questions
+- Talk to mentors, ask questions. they will help you to start out
 
-**Don't ask vague stuff** like "How to start?" or "I don't understand the project." Instead, be specific and show what you tried. Ask something that leads to action.
+**Don't ask vague stuff** like "How to start?" or "I don't understand the project." 
+
+Instead, be specific and show what you tried. Ask something that leads to action.
 
 ## Communication Matters A LOT
 
@@ -147,7 +156,6 @@ Follow the org's template as most orgs have one. Be specific and clear about wha
 These repos helped me a lot:
 
 https://github.com/COPS-IITBHU/GSoC-Accepted-Proposals
-
 https://github.com/SammanSarkar/GSoC_archive_2025
 
 You can see real accepted proposals and get an idea of what works and how people write it.
@@ -156,17 +164,19 @@ You can see real accepted proposals and get an idea of what works and how people
 
 Before submitting, **show your proposal to your mentor(s)**.
 
-Don't skip this. They will point out mistakes and suggest improvements. Trust me, your first version won't be perfect.
+Don't skip this. They will point out mistakes and suggest improvements. 
+
+Trust me, your first version won't be perfect.
 
 ## After Submission
 
-Now you wait… but here's the mistake many people make: they stop contributing. Don't do that. Keep contributing and interacting with the community — that's why GSoC existed in the first place.
+Now you wait… but here's the mistake many people make: they stop contributing. Don't do that. Keep contributing and interacting with the community. that's why GSoC existed in the first place.
 
 Mentors do notice this. It shows your commitment.
 
 ## Final Thoughts
 
-Starting early made a huge difference for me. Even if you don't get selected, the experience itself is super valuable. You understand open source and build connections with great people.
+Even if you don't get selected, the experience itself is super valuable. You understand open source and build connections with great people.
 
 That's already a win.`,
   },
