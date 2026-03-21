@@ -28,7 +28,7 @@ const Navigation = () => {
           </div>
           <div className="flex items-center gap-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/david11133" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground hover:text-accent transition-colors"
