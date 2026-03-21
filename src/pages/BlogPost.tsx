@@ -128,6 +128,25 @@ function ContentRenderer({ content }: { content: string }) {
       continue;
     }
 
+    if (trimmed.startsWith("```")) {
+      const language = trimmed.slice(3).trim(); // e.g., "python"
+      i++; // move to next line
+      const codeLines: string[] = [];
+      while (i < lines.length && !lines[i].trim().startsWith("```")) {
+        codeLines.push(lines[i]);
+        i++;
+      }
+      i++; // skip closing ```
+      elements.push(
+        <pre key={keyCounter++} className="bg-muted rounded-md p-4 overflow-x-auto my-4">
+          <code className={`language-${language} font-mono text-sm`}>
+            {codeLines.join("\n")}
+          </code>
+        </pre>
+      );
+      continue;
+    }
+
     // Bullet list: lines starting with - or *
     if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
       const items: React.ReactNode[] = [];
