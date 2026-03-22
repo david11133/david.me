@@ -6,34 +6,43 @@ export interface Project {
   details?: string;
 }
 
-export const projects: Project[] = [
-  {
-    slug: "extend-crocolake-tools-datasets",
-    category: "GSoC @IOOS",
-    title: "Extend CROCOLAKE Tools Datasets",
-    description:
-      "Part of CrocoLake, providing a unified database of oceanographic observations by converting diverse formats into a consistent Parquet format.",
-    details:
-      "This project focused on expanding dataset coverage and improving ingestion reliability. We designed a modular pipeline for NetCDF/CSV/Parquet normalization, added validation checks, and documented schemas. The result was faster onboarding of new datasets and improved reproducibility.",
-  },
-  {
-    slug: "nasa-data-pipelines-real-time-api",
-    category: "Personal Project",
-    title: "NASA Data Pipelines - Real Time API",
-    description:
-      "End-to-end streaming pipeline using NASA NEOWS, Kafka, Airflow, Spark, and Cassandra running in Docker.",
-    details:
-      "A reproducible dev environment with Docker Compose coordinates the services. Airflow schedules ingestion, Kafka handles buffering, Spark transforms streams, and Cassandra stores queryable state. This demo highlights patterns for building resilient data platforms.",
-  },
-  {
-    slug: "uber-etl-pipeline",
-    category: "Personal Project",
-    title: "Uber ETL Pipeline",
-    description:
-      "GCP-centric pipeline with Mage-AI, Snowflake, and Looker for analytics over Uber trip data.",
-    details:
-      "We implemented ingestion with Mage-AI, transformations for partitioned data in Snowflake, and dashboards with Looker. Emphasis was on lineage, cost awareness, and clear dimensional modeling.",
-  },
-];
+function parseFrontmatter(raw: string) {
+  const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (!match) return { data: {}, content: raw.trim() };
 
+  const frontmatter = match[1];
+  const content = match[2].trim();
+  const data: Record<string, unknown> = {};
 
+  for (const line of frontmatter.split("\n")) {
+    const colonIndex = line.indexOf(":");
+    if (colonIndex === -1) continue;
+    const key = line.slice(0, colonIndex).trim();
+    const value = line.slice(colonIndex + 1).trim();
+
+    // Strip surrounding quotes if present
+    data[key] = value.replace(/^["']|["']$/g, "");
+  }
+
+  return { data, content };
+}
+
+const files = import.meta.glob("/src/content/projects/*.md", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
+
+export const projects: Project[] = Object.entries(files).map(
+  ([filepath, raw]) => {
+    const { data, content } = parseFrontmatter(raw);
+    const slug = filepath.split("/").pop()!.replace(".md", "");
+    return {
+      slug,
+      title: data.title as string,
+      category: data.category as string,
+      description: data.description as string,
+      details: content || undefined,
+    };
+  }
+);

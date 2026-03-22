@@ -11,38 +11,40 @@ const Blog = () => {
 
         <div className="space-y-12">
           {blogPosts.map((post) => (
-            <article key={post.slug} className="border-b border-border pb-12 last:border-b-0">
-              <div className="mb-4">
-                <Link to={`/blog/${post.slug}`}>
-                  <h2 className="text-3xl font-bold mb-2 text-foreground opacity-30 hover:opacity-100 transition-opacity">
+            <Link to={`/blog/${post.slug}`} key={post.slug} className="block group">
+              <article className="border-b border-border pb-12 last:border-b-0">
+                <div className="mb-4">
+                  <h2 className="text-3xl font-bold mb-2 text-foreground group-hover:opacity-100 opacity-70 transition-opacity">
                     {post.title}
                   </h2>
-                </Link>
-                <time className="text-sm text-muted-foreground">{post.date}</time>
-              </div>
-              
-              <p className="text-foreground leading-relaxed mb-4">
-                {post.excerpt}
-              </p>
+                  <time className="text-sm text-muted-foreground">{post.date}</time>
+                </div>
 
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <Badge 
-                    key={tag} 
-                    variant="secondary"
-                    className="text-xs"
+                <p className="text-foreground leading-relaxed mb-4 group-hover:opacity-100 opacity-70 transition-opacity">
+                  {post.excerpt}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.map((tag) => (
+                    <Badge 
+                      key={tag} 
+                      variant="secondary"
+                      className="text-xs group-hover:opacity-100 opacity-70 transition-opacity"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="mt-4">
+                  <span 
+                    className="text-primary underline underline-offset-4 group-hover:opacity-100 opacity-70 transition-opacity"
                   >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-
-              <div className="mt-4">
-                <Link to={`/blog/${post.slug}`} className="text-primary underline underline-offset-4">
-                  Read more
-                </Link>
-              </div>
-            </article>
+                    Read more
+                  </span>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
       </div>
