@@ -87,6 +87,15 @@ function ContentRenderer({ content }: { content: string }) {
       continue;
     }
 
+    // Horizontal rule (---)
+    if (trimmed === "---") {
+      elements.push(
+        <hr key={keyCounter++} className="my-8 border-border" />
+      );
+      i++;
+      continue;
+    }
+
     // Heading: line of all caps or ends with ? that is short = treat as section header
     // Explicit markdown headings
     if (trimmed.startsWith("# ")) {
